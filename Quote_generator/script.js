@@ -5,7 +5,7 @@ const authortext = document.getElementById("author");
 const quotetext = document.getElementById("quote");
 
 
-// Get quotes from api
+// Get quotes from api (2)
 let apiQuotes = [];
 
 // new quote
@@ -26,7 +26,7 @@ function newQuote(){
 }
 
 
-
+// make api call (1)
 async function getQuotes()
 {
     const apiUrl = 'https://type.fit/api/quotes';
@@ -40,10 +40,9 @@ async function getQuotes()
     }
 }
 
-// tweet 
+// tweet (3)
 function tweetQuote(){
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${quotetext.textContent} - ${authortext.textContent}`;
-
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${quotetext.textContent} - ${authortext.textContent}`; // use alt+z -> to show all code in viewport
     window.open(twitterUrl, '_blank');
 }
 
